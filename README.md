@@ -1,4 +1,4 @@
-# Guacamole project
+# Apache Guacamole Docker Compose
 
 This is a small documentation how to run a fully working **Apache Guacamole (incubating)** instance with docker (docker-compose). The goal of this project is to make it easy to test Guacamole.
 
