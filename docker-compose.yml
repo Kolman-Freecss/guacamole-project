@@ -8,8 +8,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 'MariaDBRootPSW'
       MYSQL_DATABASE: 'guacamole_db'
-      MYSQL_USER: 'guacamole_user'
-      MYSQL_PASSWORD: 'MariaDBUserPSW'
+      MYSQL_USER: 'guacamole_user' #guacamole_user
+      MYSQL_PASSWORD: 'MariaDBUserPSW' #MariaDBUserPSW
     volumes:
       - 'guacdb-data:/var/lib/mysql'
 
@@ -28,8 +28,8 @@ services:
       GUACD_HOSTNAME: "guacd"
       MYSQL_HOSTNAME: "guacdb"
       MYSQL_DATABASE: "guacamole_db"
-      MYSQL_USER: "guacamole_user"
-      MYSQL_PASSWORD: "MariaDBUserPSW"
+      MYSQL_USER: "guacamole_user" #guacamole_user
+      MYSQL_PASSWORD: "MariaDBUserPSW" #MariaDBUserPSW
     depends_on:
       - guacdb
       - guacd
