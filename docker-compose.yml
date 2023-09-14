@@ -20,7 +20,7 @@ services:
 
   guacamole:
     container_name: guacamole
-    image: 'guacamoleclient15:latest'
+    image: 'guacamoleclient15:latest'#'guacamoleclient15:latest' guacamole/guacamole
     restart: unless-stopped
     ports:
       - '8080:8080'

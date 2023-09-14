@@ -18,7 +18,21 @@ Create database initialization script:
 docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --mysql > /opt/guacamole/mysql/01-initdb.sql
 ```
 
-Copy the db initialization script to the container.
+Create the schema and users inside the database:
+Open a shell in the container and execute the script.
+
+```bash
+docker exec -it guacdb bash
+
+# Enter to the mysql console
+# The password is defined in the docker-compose.yml file
+
+mysql
+CREATE DATABASE guacamole_db;
+```
+
+
+Copy the db initialization script to the container. (guac_db.sql is a custom script)
 
 ```bash
 docker cp guac_db.sql guacdb:/guac_db.sql
