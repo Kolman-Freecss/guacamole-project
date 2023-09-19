@@ -167,8 +167,9 @@ CREATE TABLE guacamole_user_connection_comment
 
     `id`            int(11) NOT NULL AUTO_INCREMENT,
     `user_id`       int(11) NOT NULL,
+    `username`      varchar(128) NOT NULL,
     `connection_id` int(11) NOT NULL,
-    `comment`       varchar(128) NOT NULL,
+    `comment`       TEXT NOT NULL,
     `created_date`  DATE,
 
     PRIMARY KEY (`id`),

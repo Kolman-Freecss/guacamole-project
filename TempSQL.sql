@@ -1,3 +1,9 @@
+-- Alter table guacamole_user_connection_comment change varchar to text on comment
+Alter table guacamole_user_connection_comment modify comment text;
+
+-- Table guacamole_user_connection_comment modify USERNAME
+Alter table guacamole_user_connection_comment add username varchar(128) NOT NULL;
+
 -- Table guacamole_connection modify
 Alter table guacamole_connection add description longtext; 
 
