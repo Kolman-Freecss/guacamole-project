@@ -1,3 +1,6 @@
+-- Table guacamole_connection modify
+Alter table guacamole_connection add description longtext; 
+
 
 -- Table created on 14/09/2023
 CREATE TABLE `guacamole_user_connection_comment_permission`

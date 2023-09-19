@@ -70,6 +70,9 @@ CREATE TABLE `guacamole_connection`
     -- Load-balancing behavior
     `connection_weight`        int(11),
     `failover_only`            boolean      NOT NULL DEFAULT 0,
+    
+    -- Description
+    `description`              longtext, 
 
     PRIMARY KEY (`connection_id`),
     UNIQUE KEY `connection_name_parent` (`connection_name`, `parent_id`),
