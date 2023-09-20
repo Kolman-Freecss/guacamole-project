@@ -167,9 +167,9 @@ CREATE TABLE guacamole_user_connection_comment
 
     `id`            int(11) NOT NULL AUTO_INCREMENT,
     `user_id`       int(11) NOT NULL,
-    `username`      varchar(128) NOT NULL,
+    `username`      varchar(128) NOT NULL DEFAULT '',
     `connection_id` int(11) NOT NULL,
-    `connection_name`          varchar(128) NOT NULL,
+    `connection_name`          varchar(128) NOT NULL DEFAULT '',
     `comment`       TEXT NOT NULL,
     `created_date`  DATE,
 
@@ -726,13 +726,6 @@ SELECT entity_id,
        NOW()
 FROM guacamole_entity
 WHERE name = 'guacadmin';
-
--- Create default user connection comment
-INSERT INTO guacamole_user_connection_comment (user_id, connection_id, comment, created_date)
-VALUES ((SELECT user_id FROM guacamole_user INNER JOIN guacamole_entity ON guacamole_user.entity_id = guacamole_entity.entity_id WHERE name = 'guacadmin'),
-        1,
-        'Default user connection',
-        NOW());
 
 -- Grant this user all system permissions
 INSERT INTO guacamole_system_permission (entity_id, permission)

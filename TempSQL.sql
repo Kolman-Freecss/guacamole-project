@@ -1,3 +1,13 @@
+-- TEST
+-- Create default user connection comment
+-- INSERT INTO guacamole_user_connection_comment (user_id, connection_id, comment, created_date)
+-- VALUES ((SELECT user_id FROM guacamole_user INNER JOIN guacamole_entity ON guacamole_user.entity_id = guacamole_entity.entity_id WHERE name = 'guacadmin'),
+--         1,
+--         'Default user connection',
+--         NOW());
+
+------ TESTS -----
+
 -- 20/09/2023: Alter table guacamole_user_connection_comment add `connection_name`          varchar(128) NOT NULL 
 ALTER TABLE guacamole_user_connection_comment ADD `connection_name` varchar(128) NOT NULL;
 
