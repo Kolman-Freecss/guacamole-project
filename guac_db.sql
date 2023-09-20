@@ -169,6 +169,7 @@ CREATE TABLE guacamole_user_connection_comment
     `user_id`       int(11) NOT NULL,
     `username`      varchar(128) NOT NULL,
     `connection_id` int(11) NOT NULL,
+    `connection_name`          varchar(128) NOT NULL,
     `comment`       TEXT NOT NULL,
     `created_date`  DATE,
 

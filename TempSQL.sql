@@ -1,3 +1,6 @@
+-- 20/09/2023: Alter table guacamole_user_connection_comment add `connection_name`          varchar(128) NOT NULL 
+ALTER TABLE guacamole_user_connection_comment ADD `connection_name` varchar(128) NOT NULL;
+
 -- Alter table guacamole_user_connection_comment change varchar to text on comment
 Alter table guacamole_user_connection_comment modify comment text;
 
