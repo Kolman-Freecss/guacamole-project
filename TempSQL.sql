@@ -1,3 +1,13 @@
+-- 03/09/2023: Alter table guacamole_user_connection_comment add `user_connection_comment_id`
+ALTER TABLE `guacamole_connection_history`
+    ADD COLUMN `user_connection_comment_id` INT(11) DEFAULT NULL,
+    ADD CONSTRAINT `guacamole_connection_history_ibfk_4`
+    FOREIGN KEY (`user_connection_comment_id`)
+    REFERENCES `guacamole_user_connection_comment` (`id`)
+    ON DELETE SET NULL;
+
+
+
 -- 20/09/2023: Alter table guacamole_user_connection_comment add `connection_name`          varchar(128) NOT NULL 
 ALTER TABLE guacamole_user_connection_comment ADD `connection_name` varchar(128) NOT NULL;
 

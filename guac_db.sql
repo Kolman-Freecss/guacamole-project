@@ -625,6 +625,7 @@ CREATE TABLE `guacamole_connection_history`
     `sharing_profile_name` varchar(128) DEFAULT NULL,
     `start_date`           datetime     NOT NULL,
     `end_date`             datetime     DEFAULT NULL,
+    `user_connection_comment_id` int(11) DEFAULT NULL,
 
     PRIMARY KEY (`history_id`),
     KEY                    `user_id` (`user_id`),
@@ -645,6 +646,10 @@ CREATE TABLE `guacamole_connection_history`
     CONSTRAINT `guacamole_connection_history_ibfk_3`
         FOREIGN KEY (`sharing_profile_id`)
             REFERENCES `guacamole_sharing_profile` (`sharing_profile_id`) ON DELETE SET NULL
+
+    CONSTRAINT `guacamole_connection_history_ibfk_4`
+        FOREIGN KEY (`user_connection_comment_id`)
+            REFERENCES `guacamole_user_connection_comment` (`id`) ON DELETE SET NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
