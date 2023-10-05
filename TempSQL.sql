@@ -6,8 +6,6 @@ ALTER TABLE `guacamole_connection_history`
     REFERENCES `guacamole_user_connection_comment` (`id`)
     ON DELETE SET NULL;
 
-
-
 -- 20/09/2023: Alter table guacamole_user_connection_comment add `connection_name`          varchar(128) NOT NULL 
 ALTER TABLE guacamole_user_connection_comment ADD `connection_name` varchar(128) NOT NULL;
 

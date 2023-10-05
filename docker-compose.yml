@@ -3,7 +3,7 @@ services:
 
   guacdb:
     container_name: guacdb
-    image: mariadb/server:latest
+    image: mariadb:10.5.10
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: 'MariaDBRootPSW'
